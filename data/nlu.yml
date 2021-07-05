@@ -1,0 +1,170 @@
+version: "2.0"
+
+nlu:
+- intent: start_conversation
+  examples: |
+    - bot says hi
+    - bot says hello
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hii
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: thankyou
+  examples: |
+    - Thank you
+    - thanks
+    - Thank you very much
+    - thankyou so much
+    - thank you for this information
+    - thank you for providing me this information
+    - thanks for providing me this information
+    - thank you for help
+    - your service is very good
+    - i love your service thank you
+    - thank you for support
+
+- intent: Yes_ready
+  examples: |
+    - yes
+    - true
+
+- intent: Yes_familier
+  examples: |
+    - yes
+    - true
+
+- intent: Yes_continue
+  examples: |
+    - yes
+    - true
+
+- intent: Yes_verify
+  examples: |
+    - yes
+    - true
+
+- intent: Yes_other_tool
+  examples: |
+    - yes
+    - true
+
+- intent: No_ready
+  examples: |
+    - no
+    - false
+
+- intent: No_familier
+  examples: |
+    - no
+    - false
+
+- intent: No_continue
+  examples: |
+    - no
+    - false
+
+- intent: No_verify
+  examples: |
+    - no
+    - false
+
+- intent: No_other_tool
+  examples: |
+    - no
+    - false
+
+- intent: product
+  examples: |
+    - product
+
+- intent: about_product_details_by_user
+  examples: |
+    - 3D electromagnetic field simulation is applied to analyze electromagnetic compatibility (EMC) and electromagnetic interference (EMI).
+    - Computational fluid dynamics  is used to solve and analyze problems which involve fluid flows and heat transfer.
+    - Aero-acoustic simulation analyzes the sound generation and sound propagation caused by turbulent fluid motion and/or fluids interacting with surfaces. Most practical aero-acoustic analyses are handled by the so-called “aero-acoustic analogy” developed by Sir James Lighthill, whereby the governing equations of fluid motion are coerced into a wave equation form. Interactions with surfaces are taken into account by additional source terms. The method can predict acoustic time signals and acoustic spectra at the microphone (observer) position.
+    - "Maintaining, commenting on and coordinating customer requirement specifications
+    - Create, maintain and communicate requirements at all levels (from the system until deep into the components)
+    - Create, maintain and communicate test cases at all levels (from the system until deep into the components)
+    - Execution of test cases and documentation of the results
+    - Ensuring complete traceability from the customer specifications to requirements at all levels up to the test result in the overall system"
+    - "To gathering the stakeholder requirements and develop architecture perspectives.
+    - Develop concepts & views of possible architecturesand create logical, physical models to evaluate possible architecture variants"
+    - The tool ReqMan is used to transform requirements documents in order to use them in the context of requirements management.
+    - Test reports, which are created in the course of development and/or release tests, can be created, managed and archived in the SAP Test DataBase. The use of test orders is possible if required.
+    - "Internal and external prototype orders can be created, managed and archived in the Prototype DataBase in SAP. Due to the close integration with the Test DataBase and SAP MasterBOMs, efficiency gains and potential savings are possible.
+    - Then, the Prototype DataBase cockpit can be opened with the SAP transaction code YENPDB."
+    - "Global test process Management for Planning, Preparation, Execution, Evaluation and Reporting.
+    - Establish an efficient overall user interface to run all test tasks."
+    - Simulation data management is used to ensure traceability, standardization and efficient handling of simulation data. To achieve this, one tool is used with all simulation types and applications in use at Brose. Compatibility is secured via interfaces for each simulation workflow.
+    - Die-casting simulation is a method to analyze the manufacturing process of die-casted parts made of aluminum, magnesium or zinc. The process simulation enables an adequate and optimized design for casting with respect to process parameters and gate locations.
+    - Environmental conditions such as dust or water/ice are affecting product functionality and can be virtually assessed by using particle methods with or without fluid dynamics.
+    - Electric field analyses calculate the electric field in conductive or capacitive systems. Typical quantities of interest in an electric field analysis include for example the electric field, current density or electric flux density.
+    - Low frequency electromagnetic simulation serves to characterize the nonlinear, transient motion of electromagnetic components such as magnetic actuators, transformers, sensors or induction heating.
+    - Forming simulation is a method to analyze the manufacturing process of sheet metal parts or thermoforming of organo sheets (i.e. continuously fiber reinforced thermoplastics). The discipline can be split into geometric forming analysis and incremental forming simulation. Geometric forming analysis takes the final part geometry into account. It shows a good performance for sheet metal parts which are manufactured in one stage. For thermoforming of organo sheets geometric forming analysis – so-called draping analysis – is valid for simple geometries only. Incremental forming simulation is more advanced and considers the whole physics of the forming process. It considers tool concepts and is applicable to components manufactured in multi-stage operations. It serves to analyze local material behavior (like thickness reductions of sheet metal and fiber orientation of organo sheets) and therefore offers valuable information for subsequent mechanical simulation (cf. integrative simulation). Moreover, it permits conclusions about the manufacturability of a component.
+    - Gear analysis evaluates systems of involute gears and allows for the sizing, tolerance definition and optimization of the system’s components, like gear wheels and shafts. Calculated properties of the system can then be transferred to other simulation disciplines, e.g. Multi-body simulation and Finite Element Analysis.
+    - "Injection molding simulation is a method to analyze the injection molding process considering the produced part, properties of the mold and process settings of the machine. Injection molding simulation focuses on:
+    - Filling, packing and cooling including the runner and cooling design to avoid plastic defects
+    - Influence of the cooling system on heat dissipation of the part and evaluation of the cycle time
+    - Calculation of shrinkage and warpage
+    - Fiber orientation and influence on anisotropic stiffness behavior and warpage
+    - Outsert parts with metal or composite inserts
+    - Deflection of electronic pins by the filling pressure"
+    - "Adequate material input data is the basis for the setup of each simulation. Therefore, different simulation approaches require different material modelling. Procurement, calibration and provision of the material data is centralized at ZEW-VE.
+    - The standard isotropic material cards are calibrated with averaged measurement data based on tensile tests.
+    - For an advanced simulation, the required testing effort increases due to the need of highly sophisticated material models. In these material cards, production and orientation effects inside the materials are implemented and in addition, they are containing damage and failure information."
+    - Mapping describes the transfer of simulation data between different simulation methods, software tools or models with varying boundary conditions (e.g. different mesh sizes or types, different material models …)
+    - Multi-body system simulation (MBS) represents a kinematic and dynamic analysis of any mechanical or mechatronic system. This system might be composed of various and usually rigid bodies connected by joints, contacts and forces acting on the rigid bodies. Also, linear-flexible parts can be included. The objective of this motion simulation is to analyze the function of technical systems, the calculation of the mechanical motion state vs. time as well as the resulting reaction forces of the system.
+    - "Sensitivity analysis
+    - A sensitivity analysis assesses variables regarding their significance on the way to an optimum result.
+    - Parameter optimization
+    - While searching for an optimum state, output parameters (objective) are defined and input parameters are varied.
+    - Parameter free optimization
+    - When searching for an optimum state, output parameters (objective) are defined and typically geometric entities are varied.
+    - Robustness Analysis
+    - The influence of scattering input parameters with respect to some given objective is analyzed."
+    - Result viewers visualize simulation outputs such as deformation or stress plots.
+    - "For the analysis of non-linear static and dynamic deformation problems two different finite element methods are used: explicit or implicit finite element analysis (FEA).
+    - Quasistatic analysis
+    - For quasistatic analysis implicit FEA is applied, focusing on the evaluation of stiffness (deformation) and strength (stresses) caused by steady-state loads.
+    - In case of systems with strongly changing contacts and convergence problems, a change to explicit methods is recommended.
+    - Dynamic analysis
+    - For highly dynamic analysis (e.g. crash) explicit FEA is required."
+    - "Thermo mechanical analysis evaluates the structural and thermal behavior of structural parts at once while the thermal and structural results are calculated sequentially, i.e. the results of a thermal step serve as an input for the next structural step. This discipline is essential when dealing with solid bodies that are heated or cooled while constrained by bearings or similar constraints.
+    - Additionally, fluid flow and thermal properties can affect each other. Advanced computational fluid dynamics (CFD) is applied to evaluate thermal management and to ensure correct operation."
+    - Statistical tolerance analysis focuses on the study of accumulated geometric variations in mechanical parts and assemblies. It is based on the Monte Carlo method in combination with kinematic analysis of the system on position level. Monte Carlo method represents the kinematic system analysis with a huge number of random-like variations of the geometric input tolerance. As result one gets interface measurements which are normal distributed. Additionally, the contributors which have the highest influence on the measurement’s distribution are calculated.
+    - "Vibration analysis summarizes two different kind of analyses: -	Modal analysis: Calculation of a structure’s natural frequencies and mode shapes -	Harmonic analysis: Determination of a structure’s response to harmonically time-varying loads"
+    - For prelimiary design checks during the design phase, strength analysis of parts or assemblies with linear elastic material properties is performed. Tools are Generative Part Structural Analysis (GPS) for linear static strength analysis, stress and deformation analysis of individual parts and Generative Assembly Structural Analysis (GAS) for stress and deformation analysis or natural frequency analysis of assemblies.
+    - Git tracks the changes you make to Software files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source
+    - Perform Design or System FMEA and Perform Process FMEA. To evaluate possible product defects according to their importance for the customer, their probability of occurrence and their probability of detection.
+    - visualisation, extensive DRC control and DFM manufacturing analysis to produce high quality PCBs.
+    - Design Electronic Circuit & Create Bill of Material for you PCB
+
+
+

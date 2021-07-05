@@ -1,0 +1,87 @@
+version: "2.0"
+
+stories:
+
+- story: deny procced path
+  steps:
+  - intent: greet
+  - action: utter_bot_details
+  - intent: No_ready
+  - action: utter_deny_message
+
+- story: admit proceed deny familier yes continue with path
+  steps:
+  - intent: greet
+  - action: utter_bot_details
+  - intent: Yes_ready
+  - action: utter_admit_message
+  - intent: No_familier
+  - action: utter_further_info
+  - action: utter_continue
+  - intent: Yes_continue
+  - checkpoint: continue_asking_title
+
+- story: admit proceed deny familier no continue with path
+  steps:
+  - intent: greet
+  - action: utter_bot_details
+  - intent: Yes_ready
+  - action: utter_admit_message
+  - intent: No_familier
+  - action: utter_further_info
+  - action: utter_continue
+  - intent: No_continue
+  - action: utter_thankyou
+
+- story: admit proceed and admit familier with path
+  steps:
+  - intent: greet
+  - action: utter_bot_details
+  - intent: Yes_ready
+  - action: utter_admit_message
+  - intent: Yes_familier
+  - checkpoint: continue_asking_title
+
+- story: show product details path
+  steps:
+  - checkpoint: continue_asking_title
+  - action: utter_title
+  - intent: product
+  - checkpoint: continue_asking_product_details
+
+- story: asking product details path
+  steps:
+  - checkpoint: continue_asking_product_details
+  - action: utter_more_details_about_product
+  - intent: about_product_details_by_user
+  - action: action_product_details_response
+
+- story: yes verify path
+  steps:
+  - intent: Yes_verify
+  - action: utter_other_tool
+
+- story: yes other details path
+  steps:
+  - intent: Yes_other_tool
+  - checkpoint: continue_asking_title
+
+- story: no verify path
+  steps:
+  - intent: No_verify
+  - checkpoint: continue_asking_product_details
+
+- story: no other details path
+  steps:
+  - intent: No_other_tool
+  - action: utter_deny_message
+
+- story: goodbye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: thank you path
+  steps:
+  - intent: thankyou
+  - action: utter_last_thankyou
