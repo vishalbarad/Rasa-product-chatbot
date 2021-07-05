@@ -1,0 +1,115 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - start_conversation
+  - Yes_ready
+  - No_ready
+  - Yes_familier
+  - No_familier
+  - Yes_continue
+  - No_continue
+  - product
+  - about_product_details_by_user
+  - Yes_verify
+  - No_verify
+  - Yes_other_tool
+  - No_other_tool
+  - thankyou
+
+responses:
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_initiate_bot_conv:
+  - text: "Hello there!"
+
+  utter_thankyou:
+  - text: "Thank you for your visit! Have a nice day"
+
+  utter_last_thankyou:
+  - text: "Thank you for your visit! I am appreciate your effort."
+
+#  utter_iamabot:
+#  - text: "I am a bot, powered by Rasa."
+
+  utter_bot_details:
+    - text: "I am XYZ and I am here to guide you to the most suitable tool according to your requirements. Do you want to proceed?"
+      buttons:
+        - title: "Yes"
+          payload: "/Yes_ready"
+        - title: "NO"
+          payload: "/No_ready"
+
+  utter_deny_message:
+    - text: "Thank you for your visit! Have a nice day."
+
+  utter_admit_message:
+    - text: "Great! Let’s get started. Are you familiar with our V-Model?"
+      buttons:
+        - title: "Yes"
+          payload: "/Yes_familier"
+        - title: "NO"
+          payload: "/No_familier"
+
+  utter_further_info:
+    - text: No worries! Please click on this link for further information https://www.google.com/
+
+  utter_more_details_about_product:
+    - text: "Can you please give me more details about the tool you are looking for?"
+
+  utter_response_about_product:
+    - text: "– The most suitable tool is Tool A. Click here for more details https://...... Please contact Mr. Yash Bhola for further information."
+
+  utter_continue:
+    - text: "Do you want to continue?"
+      buttons:
+        - title: "Yes"
+          payload: "/Yes_continue"
+        - title: "No"
+          payload: "/No_continue"
+
+  utter_title:
+    - text: "Nice. Please choose which title you want to work with"
+      buttons:
+        - title: "Customer Specs and standards"
+          payload: "/product"
+        - title: "System requirements and Design"
+          payload: "/product"
+        - title: "Component requirements and design"
+          payload: "/product"
+        - title: "Component Implementation"
+          payload: "/product"
+        - title: "Component Integration and test"
+          payload: "/product"
+        - title: "system integration and test"
+          payload: "/product"
+        - title: "Vehicle test and application"
+          payload: "/product"
+
+  utter_please_rephrase:
+    - text: "Can you please give me more details about the tool you are looking for?"
+
+  utter_other_tool:
+    - text: "Cool. Do you want to look for other tools?"
+      buttons:
+        - title: "Yes"
+          payload: "/Yes_other_tool"
+        - title: "No"
+          payload: "/No_other_tool"
+
+  utter_verify_about_product:
+    - text: "Is this what you are looking for?"
+      buttons:
+        - title: "Yes"
+          payload: "/Yes_verify"
+        - title: "No"
+          payload: "/No_verify"
+
+actions:
+  - action_product_details_response
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

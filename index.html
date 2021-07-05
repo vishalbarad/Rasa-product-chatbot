@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Chatbot</title>
+</head>
+<body>
+<style>
+    	div.rw-message-text
+	{
+		font-size: 14;
+	}
+	div.rw-header.rw-with-subtitle{
+		background-color: rebeccapurple;
+	}
+
+	.rw-conversation-container .rw-response{
+		background-color: light;
+	}
+
+	.rw-conversation-container .rw-client{
+	    background-color: rebeccapurple;
+
+	}
+	.rw-widget-container .rw-launcher{
+	    background-color: rebeccapurple;
+	}
+	.rw-conversation-container .rw-replies {
+        display:inline-block;
+    }
+.rw-conversation-container .rw-reply{
+        display:block;
+        text-align: center;
+        color: white;
+        border-color: green;
+	    font-size: 14;
+        font-weight: bold;
+        background-color: rebeccapurple;
+
+    }
+    .rw-widget-container .rw-launcher{
+	    background-color: green;
+	}
+	.rw-conversation-container .rw-response{
+		background-color: light;
+	}
+
+</style>
+    <script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+    // Replace 1.x.x with the version that you want
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          customData: { language: "en" },
+          socketUrl: "http://localhost:5005",
+          // add other props here
+          initPayload: "/start_conversation",
+          title: "Product",
+          subtitle: "Enquiry bot",
+          embedded: false,
+          showFullScreenButton: true,
+          showMessageDate: true,
+          displayUnreadCount: true,
+          // profileAvatar: "type here", //You can upload log here. just type url of that logo.
+          params: {"storage": "session"}
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
+</script>
+
+</body>
+</html>
